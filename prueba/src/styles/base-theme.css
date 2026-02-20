@@ -1,0 +1,73 @@
+/*
+  Este archivo define el estilo base global del sitio.
+  1) Cargamos fuentes y Tailwind.
+  2) Declaramos variables de color reutilizables.
+  3) Configuramos estilos generales de documento y tipografía.
+*/
+
+/* Fuente principal (texto) + fuente de titulares. */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+/* Cargamos utilidades de Tailwind en todo el proyecto. */
+@import "tailwindcss";
+
+/*
+  Variables CSS:
+  - Facilitan cambios de marca sin tocar muchos archivos.
+  - Se usan como valores base para fondo, texto y acentos.
+*/
+:root {
+  --page-bg: #f8fafc;
+  --page-ink: #0f172a;
+  --brand-500: #0891b2;
+}
+
+/* Suaviza el comportamiento de scroll cuando se usan anclas internas. */
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+  Estilo base de toda la página:
+  - Fondo con degradados radiales muy suaves para dar profundidad.
+  - Tipografía principal de lectura.
+*/
+body {
+  margin: 0;
+  font-family: "Manrope", "Nunito Sans", sans-serif;
+  color: var(--page-ink);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(186, 230, 253, 0.35), transparent 36%),
+    radial-gradient(circle at 100% 18%, rgba(165, 243, 252, 0.3), transparent 34%),
+    var(--page-bg);
+}
+
+/*
+  Titulares:
+  - Cambiamos la familia tipográfica para más personalidad visual.
+  - Ajustamos tracking para un look más compacto y moderno.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", "Poppins", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Heredamos tipografía en controles para coherencia visual del UI. */
+a,
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Color de selección de texto alineado con la marca. */
+::selection {
+  color: #ecfeff;
+  background: color-mix(in srgb, var(--brand-500) 75%, #000000 8%);
+}

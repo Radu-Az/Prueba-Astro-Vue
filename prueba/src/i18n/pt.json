@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "homeTitle": "Orbit Web Studio | Agência web",
+    "homeDescription": "Agência digital especializada em design e desenvolvimento de sites modernos.",
+    "servicesTitle": "Orbit Web Studio | Serviços",
+    "servicesDescription": "Serviços de design e desenvolvimento web para marcas focadas em desempenho, estética e conversão.",
+    "contactTitle": "Orbit Web Studio | Contato",
+    "contactDescription": "Conte-nos sobre o seu projeto web e enviaremos uma proposta com escopo, prazo e orçamento."
+  },
+  "header": {
+    "tagline": "Design e desenvolvimento web",
+    "openMenu": "Abrir menu",
+    "nav": {
+      "home": "Início",
+      "services": "Serviços",
+      "contact": "Contato"
+    },
+    "language": {
+      "es": "ES",
+      "en": "EN",
+      "pt": "PT",
+      "ca": "CA",
+      "fr": "FR",
+      "eu": "EU"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Criamos experiências web rápidas, claras e memoráveis.",
+      "description": "Desenvolvemos sites corporativos, landing pages e frontends de produto para equipes que querem uma presença digital mais forte.",
+      "primaryCta": "Solicitar proposta",
+      "secondaryCta": "Explorar serviços"
+    },
+    "process": {
+      "kicker": "Processo",
+      "title": "Uma execução organizada, do início ao fim.",
+      "description": "Trabalhamos com um método claro para que cada etapa tenha propósito, entregas concretas e decisões fundamentadas.",
+      "steps": [
+        {
+          "title": "Discovery estratégico",
+          "description": "Definimos objetivos, público, proposta de valor e escopo real do projeto."
+        },
+        {
+          "title": "Direção de design",
+          "description": "Estruturamos conteúdo e desenhamos interfaces claras para desktop e mobile."
+        },
+        {
+          "title": "Produção web",
+          "description": "Desenvolvemos com foco em desempenho, escalabilidade e manutenção simples."
+        },
+        {
+          "title": "Lançamento e melhoria",
+          "description": "Publicamos, medimos e otimizamos para sustentar crescimento e conversão."
+        }
+      ]
+    },
+    "testimonials": {
+      "kicker": "Resultados",
+      "title": "Equipes que já construíram conosco",
+      "description": "Clientes que valorizam uma combinação real de design, clareza técnica e velocidade.",
+      "items": [
+        {
+          "quote": "Passamos de um site lento para uma plataforma rápida e escalável. O impacto foi visível desde a primeira semana.",
+          "author": "Marina Gomez",
+          "role": "CMO, Northlane Studio"
+        },
+        {
+          "quote": "A equipe transformou nossa ideia em um site claro e moderno. Todo o processo foi organizado e sem atritos.",
+          "author": "Diego Ramos",
+          "role": "Founder, Pixel Growth"
+        },
+        {
+          "quote": "Precisávamos de uma base técnica sólida e uma estética mais premium. Cumpriram os prazos e superaram expectativas.",
+          "author": "Sofia Ruiz",
+          "role": "Head of Product, Bright Health Tech"
+        }
+      ]
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Perguntas comuns antes de começar",
+      "description": "Respostas claras sobre prazos, suporte e forma de trabalho para você decidir com contexto real.",
+      "items": [
+        {
+          "question": "Quanto tempo leva para lançar um projeto web?",
+          "answer": "Depende do escopo, mas a maioria dos projetos é entregue em 3 a 8 semanas com marcos semanais claros."
+        },
+        {
+          "question": "Vocês podem trabalhar sobre um site existente?",
+          "answer": "Sim. Podemos auditar, redesenhar e evoluir seu site atual sem reconstruir tudo do zero."
+        },
+        {
+          "question": "Vocês incluem suporte após o lançamento?",
+          "answer": "Sim. Oferecemos manutenção contínua, melhorias evolutivas e suporte técnico para novas necessidades."
+        },
+        {
+          "question": "Como a comunicação do projeto é organizada?",
+          "answer": "Centralizamos feedback e progresso em entregas semanais para que você saiba sempre o que foi feito e o próximo passo."
+        }
+      ]
+    },
+    "newsletter": {
+      "kicker": "Recursos",
+      "title": "Receba ideias para melhorar seu site todo mês",
+      "description": "Compartilhamos guias breves de conversão, desempenho e arquitetura web para equipes de marketing e produto.",
+      "form": {
+        "submitIdle": "Participar",
+        "submitLoading": "Enviando...",
+        "submitDone": "Inscrito",
+        "invalidEmail": "Digite um email válido.",
+        "success": "Inscrição concluída. Enviaremos apenas conteúdo útil."
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Serviço",
+    "cta": "Falar sobre este serviço",
+    "cardDetailsAria": "Ver detalhes de",
+    "sections": [
+      {
+        "name": "Landing Pages de Conversão",
+        "subtitle": "Páginas orientadas para captar leads e vendas",
+        "description": "Criamos landing pages otimizadas para campanhas com foco em velocidade, clareza e resultados de negócio.",
+        "cards": [
+          {
+            "title": "Estratégia",
+            "description": "Proposta de valor e narrativa focadas em converter."
+          },
+          {
+            "title": "UI",
+            "description": "Design visual limpo e hierárquico para leitura rápida."
+          },
+          {
+            "title": "Módulos",
+            "description": "Blocos flexíveis para iterar campanhas sem refazer tudo."
+          },
+          {
+            "title": "CRM",
+            "description": "Formulários conectados ao seu fluxo comercial."
+          },
+          {
+            "title": "Analítica",
+            "description": "Eventos-chave e rastreabilidade de cada conversão."
+          },
+          {
+            "title": "Lançamento",
+            "description": "Publicação rápida e estável em produção."
+          }
+        ]
+      },
+      {
+        "name": "Site Corporativo",
+        "subtitle": "Sites institucionais profissionais e escaláveis",
+        "description": "Criamos sites de marca sólidos, com navegação clara e arquitetura preparada para crescer.",
+        "cards": [
+          {
+            "title": "Arquitetura",
+            "description": "Conteúdo estruturado para comunicar valor em poucos segundos."
+          },
+          {
+            "title": "Blog",
+            "description": "Seções editáveis para estratégia de conteúdo e posicionamento."
+          },
+          {
+            "title": "Escala",
+            "description": "Base técnica pronta para evoluir sem dívida desnecessária."
+          },
+          {
+            "title": "Idiomas",
+            "description": "Suporte multilíngue para expansão internacional."
+          },
+          {
+            "title": "SEO",
+            "description": "SEO técnico integrado desde a estrutura do projeto."
+          },
+          {
+            "title": "Componentes",
+            "description": "Sistema visual consistente para novas páginas e seções."
+          }
+        ]
+      },
+      {
+        "name": "Frontend de Web App",
+        "subtitle": "Interfaces dinâmicas para produtos digitais",
+        "description": "Desenvolvemos frontends com Vue para dashboards, painéis e fluxos interativos complexos.",
+        "cards": [
+          {
+            "title": "Vue",
+            "description": "Arquitetura sustentável para aplicações de longa vida."
+          },
+          {
+            "title": "Sistema UI",
+            "description": "Componentes reutilizáveis para escalar mais rápido."
+          },
+          {
+            "title": "Tabelas",
+            "description": "Visualização de dados clara e otimizada."
+          },
+          {
+            "title": "Auth UI",
+            "description": "Fluxos de acesso e permissões com UX consistente."
+          },
+          {
+            "title": "Feedback",
+            "description": "Estados de carregamento, erro e confirmação bem definidos."
+          },
+          {
+            "title": "APIs",
+            "description": "Integrações robustas com backend e serviços externos."
+          }
+        ]
+      },
+      {
+        "name": "Otimização e Suporte",
+        "subtitle": "Melhoria contínua após o lançamento",
+        "description": "Auditamos e evoluímos seu site para sustentar crescimento e desempenho no longo prazo.",
+        "cards": [
+          {
+            "title": "Auditoria",
+            "description": "Revisão técnica de performance, UX e SEO."
+          },
+          {
+            "title": "Refactor",
+            "description": "Melhorias de código orientadas à estabilidade e velocidade."
+          },
+          {
+            "title": "Novas views",
+            "description": "Iterações funcionais alinhadas ao negócio."
+          },
+          {
+            "title": "Monitoramento",
+            "description": "Acompanhamento de erros e disponibilidade em produção."
+          },
+          {
+            "title": "Suporte",
+            "description": "Pacote de horas para mudanças prioritárias."
+          },
+          {
+            "title": "Roadmap",
+            "description": "Plano trimestral com prioridades e objetivos mensuráveis."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "aside": {
+      "kicker": "Contato",
+      "title": "Vamos falar sobre seu próximo site",
+      "description": "Conte-nos objetivos, prazos e contexto do negócio. Enviaremos uma proposta técnica clara e acionável.",
+      "emailLabel": "Email:",
+      "phoneLabel": "Telefone:",
+      "scheduleLabel": "Horário:",
+      "scheduleValue": "Seg - Sex | 09:00 às 18:00"
+    },
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Seu nome",
+      "company": "Empresa",
+      "companyPlaceholder": "Nome da sua empresa",
+      "email": "Email",
+      "phone": "Telefone",
+      "service": "Serviço de interesse",
+      "serviceOptions": [
+        "Landing Page de Conversão",
+        "Site Corporativo",
+        "Frontend de Web App",
+        "Otimização e Suporte"
+      ],
+      "message": "Mensagem",
+      "messagePlaceholder": "Descreva seu projeto: tipo de site, objetivos e data estimada de lançamento",
+      "submit": "Enviar solicitação"
+    },
+    "schedule": {
+      "title": "Horário de kickoff",
+      "description": "Selecione um horário para reservar a primeira reunião.",
+      "showButton": "Mostrar horários disponíveis",
+      "hideButton": "Ocultar horários disponíveis",
+      "panelTitle": "Selecione um horário:",
+      "selectedLabel": "Horário selecionado:",
+      "slots": [
+        "Segunda 10:00",
+        "Terça 15:30",
+        "Quinta 09:00",
+        "Sexta 12:00"
+      ]
+    },
+    "budget": {
+      "locale": "pt-PT",
+      "kicker": "Orçamento estimado",
+      "title": "Defina o escopo inicial",
+      "projectType": "Tipo de projeto",
+      "priority": "Prioridade",
+      "normalTimeline": "Prazo normal",
+      "expressTimeline": "Entrega expressa",
+      "sectionsLabel": "Número aproximado de seções",
+      "extras": "Extras",
+      "estimatedRange": "Faixa estimada",
+      "projectTypeOptions": [
+        {
+          "value": "landing",
+          "label": "Landing de conversão"
+        },
+        {
+          "value": "corporativa",
+          "label": "Site corporativo"
+        },
+        {
+          "value": "app",
+          "label": "Frontend de produto"
+        },
+        {
+          "value": "optimizacion",
+          "label": "Otimização e suporte"
+        }
+      ],
+      "extraOptions": [
+        {
+          "value": "copy",
+          "label": "Copy estratégico"
+        },
+        {
+          "value": "seo",
+          "label": "Configuração SEO inicial"
+        },
+        {
+          "value": "idiomas",
+          "label": "Versão multilingue"
+        },
+        {
+          "value": "integraciones",
+          "label": "Integrações externas"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "Criamos e desenvolvemos sites rápidos, elegantes e orientados à conversão para empresas digitais.",
+    "navTitle": "Navegação",
+    "studioTitle": "Estúdio",
+    "communityTitle": "Comunidade",
+    "legal": {
+      "privacy": "Política de privacidade",
+      "terms": "Termos e condições",
+      "notice": "Aviso legal"
+    },
+    "copyright": "Copyright {year} Orbit Web Studio. Todos os direitos reservados."
+  }
+}

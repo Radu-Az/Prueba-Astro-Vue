@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "homeTitle": "Orbit Web Studio | Web agency",
+    "homeDescription": "Digital agency specialized in modern website design and development.",
+    "servicesTitle": "Orbit Web Studio | Services",
+    "servicesDescription": "Web design and development services for brands focused on performance, aesthetics and conversion.",
+    "contactTitle": "Orbit Web Studio | Contact",
+    "contactDescription": "Tell us about your web project and we will send a proposal with scope, timeline and budget."
+  },
+  "header": {
+    "tagline": "Web design and development",
+    "openMenu": "Open menu",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "language": {
+      "es": "ES",
+      "en": "EN",
+      "pt": "PT",
+      "ca": "CA",
+      "fr": "FR",
+      "eu": "EU"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "We design fast, clear and memorable web experiences.",
+      "description": "We build corporate websites, landing pages and product frontends for teams that need a stronger digital presence.",
+      "primaryCta": "Request proposal",
+      "secondaryCta": "Explore services"
+    },
+    "process": {
+      "kicker": "Process",
+      "title": "A structured execution from start to finish.",
+      "description": "We follow a clear method so each stage has purpose, concrete deliverables and well-grounded decisions.",
+      "steps": [
+        {
+          "title": "Strategic discovery",
+          "description": "We define goals, audience, value proposition and realistic project scope."
+        },
+        {
+          "title": "Design direction",
+          "description": "We structure content and design clear interfaces for desktop and mobile."
+        },
+        {
+          "title": "Web production",
+          "description": "We develop with focus on performance, scalability and easy maintenance."
+        },
+        {
+          "title": "Launch and improve",
+          "description": "We launch, measure and optimize to sustain growth and conversion."
+        }
+      ]
+    },
+    "testimonials": {
+      "kicker": "Results",
+      "title": "Teams already building with us",
+      "description": "Clients who value a real mix of design, technical clarity and speed.",
+      "items": [
+        {
+          "quote": "We moved from a slow site to a fast, scalable platform. The impact was clear from week one.",
+          "author": "Marina Gomez",
+          "role": "CMO, Northlane Studio"
+        },
+        {
+          "quote": "The team translated our idea into a clear, modern website. The whole process felt smooth and organized.",
+          "author": "Diego Ramos",
+          "role": "Founder, Pixel Growth"
+        },
+        {
+          "quote": "We needed a solid technical base and a more premium look. They met deadlines and exceeded expectations.",
+          "author": "Sofia Ruiz",
+          "role": "Head of Product, Bright Health Tech"
+        }
+      ]
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Common questions before getting started",
+      "description": "Clear answers about timelines, support and workflow so you can decide with real context.",
+      "items": [
+        {
+          "question": "How long does a web project take to launch?",
+          "answer": "It depends on scope, but most projects are delivered in 3 to 8 weeks with clear weekly milestones."
+        },
+        {
+          "question": "Can you work on an existing website?",
+          "answer": "Yes. We can audit, redesign and evolve your current site without rebuilding everything from scratch."
+        },
+        {
+          "question": "Do you include support after launch?",
+          "answer": "Yes. We offer ongoing maintenance, continuous improvements and technical support for new business needs."
+        },
+        {
+          "question": "How is project communication organized?",
+          "answer": "We centralize feedback and progress in weekly deliveries so you always know what was done and what comes next."
+        }
+      ]
+    },
+    "newsletter": {
+      "kicker": "Resources",
+      "title": "Get ideas to improve your website every month",
+      "description": "We share short guides on conversion, performance and web architecture for marketing and product teams.",
+      "form": {
+        "submitIdle": "Join",
+        "submitLoading": "Sending...",
+        "submitDone": "Subscribed",
+        "invalidEmail": "Please enter a valid email.",
+        "success": "Subscription completed. We will only send useful content."
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Service",
+    "cta": "Discuss this service",
+    "cardDetailsAria": "View details for",
+    "sections": [
+      {
+        "name": "Conversion Landing Pages",
+        "subtitle": "Pages focused on lead capture and sales",
+        "description": "We design landing pages optimized for campaigns with a strong focus on speed, clarity and business outcomes.",
+        "cards": [
+          {
+            "title": "Strategy",
+            "description": "Value proposition and message architecture focused on conversion."
+          },
+          {
+            "title": "UI",
+            "description": "Clean visual design and hierarchy for fast scanning."
+          },
+          {
+            "title": "Modules",
+            "description": "Flexible blocks to iterate campaigns without rebuilding everything."
+          },
+          {
+            "title": "CRM",
+            "description": "Forms connected to your sales workflow."
+          },
+          {
+            "title": "Analytics",
+            "description": "Key events and traceability for every conversion."
+          },
+          {
+            "title": "Launch",
+            "description": "Fast and stable publishing in production."
+          }
+        ]
+      },
+      {
+        "name": "Corporate Website",
+        "subtitle": "Professional and scalable brand websites",
+        "description": "We create solid corporate websites with clear navigation and architecture ready to grow.",
+        "cards": [
+          {
+            "title": "Architecture",
+            "description": "Structured content that communicates value in seconds."
+          },
+          {
+            "title": "Blog",
+            "description": "Editable sections for content strategy and positioning."
+          },
+          {
+            "title": "Scale",
+            "description": "Technical base ready to evolve without unnecessary debt."
+          },
+          {
+            "title": "Languages",
+            "description": "Multilingual support for international expansion."
+          },
+          {
+            "title": "SEO",
+            "description": "Technical SEO integrated from the project structure."
+          },
+          {
+            "title": "Components",
+            "description": "Consistent visual system for new pages and sections."
+          }
+        ]
+      },
+      {
+        "name": "Web App Frontend",
+        "subtitle": "Dynamic interfaces for digital products",
+        "description": "We build Vue frontends for dashboards, panels and complex interactive flows.",
+        "cards": [
+          {
+            "title": "Vue",
+            "description": "Maintainable architecture for long-life applications."
+          },
+          {
+            "title": "UI System",
+            "description": "Reusable components to scale faster."
+          },
+          {
+            "title": "Tables",
+            "description": "Clear and optimized data visualization."
+          },
+          {
+            "title": "Auth UI",
+            "description": "Access and permission flows with consistent UX."
+          },
+          {
+            "title": "Feedback",
+            "description": "Well-defined loading, error and confirmation states."
+          },
+          {
+            "title": "APIs",
+            "description": "Robust integrations with backend and external services."
+          }
+        ]
+      },
+      {
+        "name": "Optimization and Support",
+        "subtitle": "Continuous improvement after launch",
+        "description": "We audit and evolve your site to sustain growth and long-term performance.",
+        "cards": [
+          {
+            "title": "Audit",
+            "description": "Technical review of performance, UX and SEO."
+          },
+          {
+            "title": "Refactor",
+            "description": "Code improvements focused on stability and speed."
+          },
+          {
+            "title": "New views",
+            "description": "Functional iterations aligned with business goals."
+          },
+          {
+            "title": "Monitoring",
+            "description": "Error tracking and uptime monitoring in production."
+          },
+          {
+            "title": "Support",
+            "description": "Hour bank for priority changes."
+          },
+          {
+            "title": "Roadmap",
+            "description": "Quarterly plan with priorities and measurable goals."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "aside": {
+      "kicker": "Contact",
+      "title": "Let's talk about your next website",
+      "description": "Tell us your goals, timeline and business context. We will send you a clear and actionable technical proposal.",
+      "emailLabel": "Email:",
+      "phoneLabel": "Phone:",
+      "scheduleLabel": "Hours:",
+      "scheduleValue": "Mon - Fri | 09:00 to 18:00"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "company": "Company",
+      "companyPlaceholder": "Your company name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service of interest",
+      "serviceOptions": [
+        "Conversion Landing Page",
+        "Corporate Website",
+        "Web App Frontend",
+        "Optimization and Support"
+      ],
+      "message": "Message",
+      "messagePlaceholder": "Describe your project: website type, goals and estimated launch date",
+      "submit": "Send request"
+    },
+    "schedule": {
+      "title": "Kickoff schedule",
+      "description": "Select a slot to reserve the first meeting.",
+      "showButton": "Show available slots",
+      "hideButton": "Hide available slots",
+      "panelTitle": "Select a slot:",
+      "selectedLabel": "Selected slot:",
+      "slots": [
+        "Monday 10:00",
+        "Tuesday 15:30",
+        "Thursday 09:00",
+        "Friday 12:00"
+      ]
+    },
+    "budget": {
+      "locale": "en-US",
+      "kicker": "Estimated budget",
+      "title": "Set your initial scope",
+      "projectType": "Project type",
+      "priority": "Priority",
+      "normalTimeline": "Standard timeline",
+      "expressTimeline": "Express delivery",
+      "sectionsLabel": "Approximate number of sections",
+      "extras": "Add-ons",
+      "estimatedRange": "Estimated range",
+      "projectTypeOptions": [
+        {
+          "value": "landing",
+          "label": "Conversion landing page"
+        },
+        {
+          "value": "corporativa",
+          "label": "Corporate website"
+        },
+        {
+          "value": "app",
+          "label": "Product frontend"
+        },
+        {
+          "value": "optimizacion",
+          "label": "Optimization and support"
+        }
+      ],
+      "extraOptions": [
+        {
+          "value": "copy",
+          "label": "Strategic copywriting"
+        },
+        {
+          "value": "seo",
+          "label": "Initial SEO setup"
+        },
+        {
+          "value": "idiomas",
+          "label": "Multilingual version"
+        },
+        {
+          "value": "integraciones",
+          "label": "External integrations"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "We design and build fast, elegant, conversion-focused websites for digital companies.",
+    "navTitle": "Navigation",
+    "studioTitle": "Studio",
+    "communityTitle": "Community",
+    "legal": {
+      "privacy": "Privacy policy",
+      "terms": "Terms and conditions",
+      "notice": "Legal notice"
+    },
+    "copyright": "Copyright {year} Orbit Web Studio. All rights reserved."
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "homeTitle": "Orbit Web Studio | Web agentzia",
+    "homeDescription": "Web modernoen diseinuan eta garapenean espezializatutako agentzia digitala.",
+    "servicesTitle": "Orbit Web Studio | Zerbitzuak",
+    "servicesDescription": "Errendimenduan, estetikan eta bihurketan fokua duten markentzat web diseinu eta garapen zerbitzuak.",
+    "contactTitle": "Orbit Web Studio | Kontaktua",
+    "contactDescription": "Kontaiguzu zure web proiektua eta irismen, epe eta aurrekontuarekin proposamen bat bidaliko dizugu."
+  },
+  "header": {
+    "tagline": "Web diseinua eta garapena",
+    "openMenu": "Menua ireki",
+    "nav": {
+      "home": "Hasiera",
+      "services": "Zerbitzuak",
+      "contact": "Kontaktua"
+    },
+    "language": {
+      "es": "ES",
+      "en": "EN",
+      "pt": "PT",
+      "ca": "CA",
+      "fr": "FR",
+      "eu": "EU"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Web esperientzia azkarrak, argiak eta gogoangarriak diseinatzen ditugu.",
+      "description": "Enpresek presentzia digital sendoagoa izan dezaten, web korporatiboak, landing page-ak eta produktu front-endak sortzen ditugu.",
+      "primaryCta": "Proposamena eskatu",
+      "secondaryCta": "Zerbitzuak ikusi"
+    },
+    "process": {
+      "kicker": "Prozesua",
+      "title": "Exekuzio ordenatua, hasieratik amaierara.",
+      "description": "Metodo argi batekin lan egiten dugu, etapa bakoitzak helburua, entregagai zehatzak eta erabaki sendoak izan ditzan.",
+      "steps": [
+        {
+          "title": "Discovery estrategikoa",
+          "description": "Helburuak, publikoa, balio-proposamena eta proiektuaren benetako irismena definitzen ditugu."
+        },
+        {
+          "title": "Diseinu norabidea",
+          "description": "Edukia egituratu eta desktop zein mugikorrerako interfaze argiak diseinatzen ditugu."
+        },
+        {
+          "title": "Web ekoizpena",
+          "description": "Errendimenduan, eskalagarritasunean eta mantentze errazean oinarrituta garatzen dugu."
+        },
+        {
+          "title": "Abiaraztea eta hobekuntza",
+          "description": "Argitaratu, neurtu eta optimizatzen dugu hazkundea eta bihurketa sostengatzeko."
+        }
+      ]
+    },
+    "testimonials": {
+      "kicker": "Emaitzak",
+      "title": "Gurekin jada eraiki duten taldeak",
+      "description": "Diseinua, argitasun teknikoa eta abiadura benetan baloratzen dituzten bezeroak.",
+      "items": [
+        {
+          "quote": "Web motel batetik plataforma azkar eta eskalagarri batera pasa ginen. Eragina lehen astetik nabaritu zen.",
+          "author": "Marina Gomez",
+          "role": "CMO, Northlane Studio"
+        },
+        {
+          "quote": "Taldeak gure ideia web argi eta moderno batean bihurtu zuen. Prozesu osoa ordenatua eta leuna izan zen.",
+          "author": "Diego Ramos",
+          "role": "Founder, Pixel Growth"
+        },
+        {
+          "quote": "Oinarri tekniko sendoa eta estetika premiumagoa behar genituen. Epeak bete eta itxaropenak gainditu zituzten.",
+          "author": "Sofia Ruiz",
+          "role": "Head of Product, Bright Health Tech"
+        }
+      ]
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Hasi aurreko ohiko galderak",
+      "description": "Epeak, laguntza eta lan egiteko modua argi azaltzen ditugu, benetako testuinguruarekin erabaki dezazun.",
+      "items": [
+        {
+          "question": "Zenbat denbora behar da web proiektu bat prest izateko?",
+          "answer": "Irismenaren araberakoa da, baina proiektu gehienak 3 eta 8 aste artean entregatzen dira, asteko mugarri argiekin."
+        },
+        {
+          "question": "Lehendik dagoen web baten gainean lan egin dezakezue?",
+          "answer": "Bai. Zure egungo weba auditatu, berriz diseinatu eta eboluzionatu dezakegu dena hutsetik berreraiki gabe."
+        },
+        {
+          "question": "Abiarazi ondoren laguntza eskaintzen duzue?",
+          "answer": "Bai. Mantentze ebolutiboa, etengabeko hobekuntzak eta behar berrietarako laguntza teknikoa eskaintzen dugu."
+        },
+        {
+          "question": "Nola antolatzen da proiektuaren komunikazioa?",
+          "answer": "Feedbacka eta aurrerapenak asteko entregen bidez zentralizatzen ditugu, beti jakin dezazun zer egin den eta zer datorren."
+        }
+      ]
+    },
+    "newsletter": {
+      "kicker": "Baliabideak",
+      "title": "Jaso zure weba hobetzeko ideiak hilero",
+      "description": "Marketin eta produktu taldeentzat bihurketa, errendimendu eta web arkitekturari buruzko gida laburrak partekatzen ditugu.",
+      "form": {
+        "submitIdle": "Batu",
+        "submitLoading": "Bidaltzen...",
+        "submitDone": "Harpidetuta",
+        "invalidEmail": "Idatzi email baliodun bat.",
+        "success": "Harpidetza osatu da. Eduki erabilgarria bakarrik bidaliko dugu."
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Zerbitzua",
+    "cta": "Zerbitzu honi buruz hitz egin",
+    "cardDetailsAria": "Xehetasunak ikusi:",
+    "sections": [
+      {
+        "name": "Bihurketarako Landing Page-ak",
+        "subtitle": "Lead eta salmentak lortzera bideratutako orriak",
+        "description": "Kanpainetarako landing-ak diseinatzen ditugu, abiadura, argitasuna eta negozio emaitzetan fokua jarrita.",
+        "cards": [
+          {
+            "title": "Estrategia",
+            "description": "Balio-proposamena eta narratiba bihurketara bideratuta."
+          },
+          {
+            "title": "UI",
+            "description": "Diseinu bisual garbia eta hierarkikoa, irakurketa azkarrerako."
+          },
+          {
+            "title": "Moduluak",
+            "description": "Kanpainak iteratzeko bloke malguak, dena berriro egin gabe."
+          },
+          {
+            "title": "CRM",
+            "description": "Zure salmenta fluxuarekin lotutako formularioak."
+          },
+          {
+            "title": "Analitika",
+            "description": "Gertaera gakoak eta bihurketa bakoitzaren trazabilitatea."
+          },
+          {
+            "title": "Abiaraztea",
+            "description": "Produkzioan argitalpen azkar eta egonkorra."
+          }
+        ]
+      },
+      {
+        "name": "Web Korporatiboa",
+        "subtitle": "Web instituzional profesional eta eskalagarriak",
+        "description": "Marka web sendoak sortzen ditugu, nabigazio argiarekin eta hazteko prest dagoen arkitekturarekin.",
+        "cards": [
+          {
+            "title": "Arkitektura",
+            "description": "Balioa segundo gutxitan komunikatzeko edukia egituratua."
+          },
+          {
+            "title": "Bloga",
+            "description": "Edukien estrategiarako eta posizionamendurako atal editagarriak."
+          },
+          {
+            "title": "Eskala",
+            "description": "Alferrikako zor teknikorik gabe eboluzionatzeko oinarri teknikoa."
+          },
+          {
+            "title": "Hizkuntzak",
+            "description": "Nazioarteko hedapenerako hizkuntza anitzeko laguntza."
+          },
+          {
+            "title": "SEO",
+            "description": "Proiektuaren egituratik bertatik integratutako SEO teknikoa."
+          },
+          {
+            "title": "Osagaiak",
+            "description": "Orri eta atal berrietarako sistema bisual koherentea."
+          }
+        ]
+      },
+      {
+        "name": "Web App Frontend",
+        "subtitle": "Produktu digitaletarako interfaze dinamikoak",
+        "description": "Vue-rekin frontend-ak garatzen ditugu dashboard, panel eta fluxu interaktibo konplexuetarako.",
+        "cards": [
+          {
+            "title": "Vue",
+            "description": "Bizitza luzeko aplikazioetarako arkitektura mantengarria."
+          },
+          {
+            "title": "UI Sistema",
+            "description": "Azkarrago eskalatzeko osagai berrerabilgarriak."
+          },
+          {
+            "title": "Taulak",
+            "description": "Datu bistaratze argi eta optimizatua."
+          },
+          {
+            "title": "Auth UI",
+            "description": "Sarbide eta baimen fluxuak UX koherentearekin."
+          },
+          {
+            "title": "Feedback",
+            "description": "Karga, errore eta baieztapen egoera ongi definituak."
+          },
+          {
+            "title": "APIak",
+            "description": "Backend eta kanpo zerbitzuekin integrazio sendoak."
+          }
+        ]
+      },
+      {
+        "name": "Optimizazioa eta Laguntza",
+        "subtitle": "Abiaraztearen ondorengo etengabeko hobekuntza",
+        "description": "Zure weba auditatu eta eboluzionatzen dugu epe luzeko hazkundea eta errendimendua sostengatzeko.",
+        "cards": [
+          {
+            "title": "Auditoria",
+            "description": "Performance, UX eta SEOren berrikuspen teknikoa."
+          },
+          {
+            "title": "Refactor",
+            "description": "Egonkortasuna eta abiadura hobetzeko kode hobekuntzak."
+          },
+          {
+            "title": "Bista berriak",
+            "description": "Negozioarekin lerrokatutako iterazio funtzionalak."
+          },
+          {
+            "title": "Monitorizazioa",
+            "description": "Produkzioko erroreen eta erabilgarritasunaren jarraipena."
+          },
+          {
+            "title": "Laguntza",
+            "description": "Lehentasunezko aldaketetarako ordu-poltsa."
+          },
+          {
+            "title": "Roadmap",
+            "description": "Hiru hileko plana, lehentasun eta helburu neurgarriekin."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "aside": {
+      "kicker": "Kontaktua",
+      "title": "Hitz egin dezagun zure hurrengo webaz",
+      "description": "Kontaiguzu helburuak, epeak eta negozio testuingurua. Proposamen tekniko argi eta ekingarria bidaliko dizugu.",
+      "emailLabel": "Emaila:",
+      "phoneLabel": "Telefonoa:",
+      "scheduleLabel": "Ordutegia:",
+      "scheduleValue": "Al - Og | 09:00 - 18:00"
+    },
+    "form": {
+      "name": "Izena",
+      "namePlaceholder": "Zure izena",
+      "company": "Enpresa",
+      "companyPlaceholder": "Zure enpresaren izena",
+      "email": "Emaila",
+      "phone": "Telefonoa",
+      "service": "Intereseko zerbitzua",
+      "serviceOptions": [
+        "Bihurketarako Landing Page-a",
+        "Web Korporatiboa",
+        "Web App Frontend",
+        "Optimizazioa eta Laguntza"
+      ],
+      "message": "Mezua",
+      "messagePlaceholder": "Deskribatu zure proiektua: web mota, helburuak eta aurreikusitako abiarazte data",
+      "submit": "Eskaera bidali"
+    },
+    "schedule": {
+      "title": "Kickoff ordutegia",
+      "description": "Lehen bilera erreserbatzeko slot bat aukeratu.",
+      "showButton": "Ordutegi erabilgarriak erakutsi",
+      "hideButton": "Ordutegi erabilgarriak ezkutatu",
+      "panelTitle": "Aukeratu ordutegia:",
+      "selectedLabel": "Aukeratutako ordutegia:",
+      "slots": [
+        "Astelehena 10:00",
+        "Asteartea 15:30",
+        "Osteguna 09:00",
+        "Ostirala 12:00"
+      ]
+    },
+    "budget": {
+      "locale": "eu-ES",
+      "kicker": "Aurrekontu orientagarria",
+      "title": "Konfiguratu hasierako irismena",
+      "projectType": "Proiektu mota",
+      "priority": "Lehentasuna",
+      "normalTimeline": "Epe normala",
+      "expressTimeline": "Express entrega",
+      "sectionsLabel": "Atalen gutxi gorabeherako kopurua",
+      "extras": "Extra-ak",
+      "estimatedRange": "Estimazio tartea",
+      "projectTypeOptions": [
+        {
+          "value": "landing",
+          "label": "Bihurketa landing-a"
+        },
+        {
+          "value": "corporativa",
+          "label": "Web korporatiboa"
+        },
+        {
+          "value": "app",
+          "label": "Produktu frontend-a"
+        },
+        {
+          "value": "optimizacion",
+          "label": "Optimizazioa eta laguntza"
+        }
+      ],
+      "extraOptions": [
+        {
+          "value": "copy",
+          "label": "Copy estrategikoa"
+        },
+        {
+          "value": "seo",
+          "label": "Hasierako SEO konfigurazioa"
+        },
+        {
+          "value": "idiomas",
+          "label": "Hizkuntza anitzeko bertsioa"
+        },
+        {
+          "value": "integraciones",
+          "label": "Kanpo integrazioak"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "Enpresa digitalen beharretarako web azkar, dotore eta bihurketara bideratuak diseinatu eta garatzen ditugu.",
+    "navTitle": "Nabigazioa",
+    "studioTitle": "Estudioa",
+    "communityTitle": "Komunitatea",
+    "legal": {
+      "privacy": "Pribatutasun politika",
+      "terms": "Baldintzak eta klausulak",
+      "notice": "Lege oharra"
+    },
+    "copyright": "Copyright {year} Orbit Web Studio. Eskubide guztiak erreserbatuta."
+  }
+}

@@ -1,0 +1,200 @@
+---
+/*
+  Header principal:
+  - Reutilizable en todas las páginas.
+  - Marca ruta activa y permite cambiar idioma con enlaces.
+*/
+import type { AppLang } from "../i18n/languages";
+import { getLanguageSwitchLinks, stripLanguagePrefix, toLocalizedPath } from "../i18n/languages";
+
+interface HeaderCopy {
+  tagline: string;
+  openMenu: string;
+  nav: {
+    home: string;
+    services: string;
+    contact: string;
+  };
+  language: {
+    es: string;
+    en: string;
+    pt: string;
+    ca: string;
+    fr: string;
+    eu: string;
+  };
+}
+
+interface SiteHeaderProps {
+  lang: AppLang;
+  copy: HeaderCopy;
+}
+
+const { lang = "es", copy } = Astro.props as SiteHeaderProps;
+
+const normalizePathname = (path: string) => (path !== "/" && path.endsWith("/") ? path.slice(0, -1) : path);
+const currentPathname = normalizePathname(Astro.url.pathname);
+const basePathname = stripLanguagePrefix(currentPathname);
+
+const navLinks = [
+  { label: copy.nav.home, href: toLocalizedPath("/", lang) },
+  { label: copy.nav.services, href: toLocalizedPath("/servicios", lang) },
+  { label: copy.nav.contact, href: toLocalizedPath("/contacto", lang) },
+];
+
+const languageLabelByCode = {
+  es: copy.language.es,
+  en: copy.language.en,
+  pt: copy.language.pt,
+  ca: copy.language.ca,
+  fr: copy.language.fr,
+  eu: copy.language.eu,
+};
+
+const languageSwitchLinks = getLanguageSwitchLinks(currentPathname).map((languageLink) => ({
+  ...languageLink,
+  label: languageLabelByCode[languageLink.code],
+}));
+
+const currentLanguageLabel = languageLabelByCode[lang];
+---
+
+<header class="sticky top-0 z-50 border-b border-slate-800/70 bg-slate-950/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-6xl items-center gap-4 px-6 py-4 lg:px-8">
+    <a href={toLocalizedPath("/", lang)} class="inline-flex items-center gap-3 text-white">
+      <span class="h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_0_7px_rgba(34,211,238,0.18)]"></span>
+      <span>
+        <span class="block text-base font-semibold leading-none">Orbit Web Studio</span>
+        <span class="mt-1 hidden text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400 sm:block">
+          {copy.tagline}
+        </span>
+      </span>
+    </a>
+
+    <nav class="ml-auto hidden items-center gap-8 md:flex" aria-label={copy.nav.home}>
+      {
+        navLinks.map((navigationLink) => {
+          const isCurrentPage = basePathname === stripLanguagePrefix(normalizePathname(navigationLink.href));
+
+          return (
+            <a
+              href={navigationLink.href}
+              class:list={[
+                "relative py-1 text-sm font-medium transition after:absolute after:bottom-[-7px] after:left-0 after:h-0.5 after:w-full after:origin-left after:rounded-full after:bg-cyan-300 after:transition-transform after:duration-300",
+                isCurrentPage
+                  ? "text-white after:scale-x-100"
+                  : "text-slate-300 after:scale-x-0 hover:text-white hover:after:scale-x-100",
+              ]}
+              aria-current={isCurrentPage ? "page" : undefined}
+            >
+              {navigationLink.label}
+            </a>
+          );
+        })
+      }
+    </nav>
+
+    <details class="group relative ml-4 hidden md:block">
+      <summary class="inline-flex list-none cursor-pointer items-center gap-2 rounded-full border border-slate-700 bg-slate-900/90 px-3 py-2 text-slate-200 marker:content-none">
+        <span class="text-[11px] font-semibold tracking-[0.12em]">{currentLanguageLabel}</span>
+        <svg
+          class="h-3.5 w-3.5 text-slate-400 transition duration-200 group-open:rotate-180"
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m6 8 4 4 4-4" />
+        </svg>
+      </summary>
+
+      <div class="absolute right-0 mt-3 w-40 rounded-2xl border border-slate-700/80 bg-slate-900/95 p-2 shadow-xl shadow-slate-950/70">
+        {
+          languageSwitchLinks.map((languageLink) => (
+            <a
+              href={languageLink.href}
+              class:list={[
+                "block rounded-lg px-3 py-2 text-xs font-semibold tracking-wide transition",
+                lang === languageLink.code
+                  ? "bg-cyan-500/20 text-cyan-200"
+                  : "text-slate-300 hover:bg-slate-800 hover:text-white",
+              ]}
+              aria-current={lang === languageLink.code ? "true" : undefined}
+            >
+              {languageLink.label}
+            </a>
+          ))
+        }
+      </div>
+    </details>
+
+    <details class="relative ml-auto md:hidden">
+      <summary class="list-none rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 text-slate-200 marker:content-none">
+        <span class="sr-only">{copy.openMenu}</span>
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </summary>
+
+      <nav
+        class="absolute right-0 mt-3 w-56 rounded-2xl border border-slate-700/80 bg-slate-900/95 p-2 shadow-xl shadow-slate-950/70"
+        aria-label={copy.openMenu}
+      >
+        {
+          navLinks.map((navigationLink) => {
+            const isCurrentPage = basePathname === stripLanguagePrefix(normalizePathname(navigationLink.href));
+
+            return (
+              <a
+                href={navigationLink.href}
+                class:list={[
+                  "block rounded-xl px-4 py-3 text-sm transition",
+                  isCurrentPage
+                    ? "bg-cyan-500/15 font-semibold text-cyan-200"
+                    : "text-slate-300 hover:bg-slate-800 hover:text-white",
+                ]}
+                aria-current={isCurrentPage ? "page" : undefined}
+              >
+                {navigationLink.label}
+              </a>
+            );
+          })
+        }
+
+        <details class="group mt-2 rounded-xl border border-slate-700/70 bg-slate-900/80">
+          <summary class="flex list-none items-center justify-between px-4 py-3 text-sm text-slate-200 marker:content-none">
+            <span class="text-xs font-semibold tracking-[0.12em]">{currentLanguageLabel}</span>
+            <svg
+              class="h-3.5 w-3.5 text-slate-400 transition duration-200 group-open:rotate-180"
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6 8 4 4 4-4" />
+            </svg>
+          </summary>
+
+          <div class="grid grid-cols-3 gap-2 px-3 pb-3">
+            {
+              languageSwitchLinks.map((languageLink) => (
+                <a
+                  href={languageLink.href}
+                  class:list={[
+                    "rounded-lg px-2 py-2 text-center text-xs font-semibold transition",
+                    lang === languageLink.code
+                      ? "bg-cyan-500/20 text-cyan-200"
+                      : "bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white",
+                  ]}
+                  aria-current={lang === languageLink.code ? "true" : undefined}
+                >
+                  {languageLink.label}
+                </a>
+              ))
+            }
+          </div>
+        </details>
+      </nav>
+    </details>
+  </div>
+</header>

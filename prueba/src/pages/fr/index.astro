@@ -1,0 +1,27 @@
+﻿---
+import BaseSiteLayout from "../../layouts/BaseSiteLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+import HomeHeroSection from "../../components/HomeHeroSection.astro";
+import HomeProcessSection from "../../components/HomeProcessSection.astro";
+import HomeTestimonialsSection from "../../components/HomeTestimonialsSection.astro";
+import HomeFaqSection from "../../components/HomeFaqSection.astro";
+import HomeNewsletterSection from "../../components/HomeNewsletterSection.astro";
+import fr from "../../i18n/fr.json";
+---
+
+<BaseSiteLayout lang="fr" title={fr.meta.homeTitle} description={fr.meta.homeDescription}>
+  <SiteHeader lang="fr" copy={fr.header} />
+
+  <main>
+    <HomeHeroSection lang="fr" copy={fr.home.hero} />
+    <HomeProcessSection copy={fr.home.process} />
+    <HomeTestimonialsSection copy={fr.home.testimonials} />
+    <HomeFaqSection copy={fr.home.faq} />
+    <HomeNewsletterSection copy={fr.home.newsletter} />
+  </main>
+
+  <SiteFooter lang="fr" copy={fr.footer} />
+</BaseSiteLayout>
+
+

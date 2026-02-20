@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "homeTitle": "Orbit Web Studio | Agència web",
+    "homeDescription": "Agència digital especialitzada en disseny i desenvolupament de webs modernes.",
+    "servicesTitle": "Orbit Web Studio | Serveis",
+    "servicesDescription": "Serveis de disseny i desenvolupament web per a marques enfocades en rendiment, estètica i conversió.",
+    "contactTitle": "Orbit Web Studio | Contacte",
+    "contactDescription": "Explica'ns el teu projecte web i t'enviarem una proposta amb abast, termini i pressupost."
+  },
+  "header": {
+    "tagline": "Disseny i desenvolupament web",
+    "openMenu": "Obrir menú",
+    "nav": {
+      "home": "Inici",
+      "services": "Serveis",
+      "contact": "Contacte"
+    },
+    "language": {
+      "es": "ES",
+      "en": "EN",
+      "pt": "PT",
+      "ca": "CA",
+      "fr": "FR",
+      "eu": "EU"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Dissenyem experiències web ràpides, clares i memorables.",
+      "description": "Creem webs corporatives, landing pages i frontends de producte per a equips que volen una presència digital més sòlida.",
+      "primaryCta": "Sol·licitar proposta",
+      "secondaryCta": "Explorar serveis"
+    },
+    "process": {
+      "kicker": "Procés",
+      "title": "Una execució ordenada, de principi a fi.",
+      "description": "Treballem amb un mètode clar perquè cada etapa tingui propòsit, lliurables concrets i decisions ben fonamentades.",
+      "steps": [
+        {
+          "title": "Discovery estratègic",
+          "description": "Definim objectius, públic, proposta de valor i abast real del projecte."
+        },
+        {
+          "title": "Direcció de disseny",
+          "description": "Estructurem continguts i dissenyem interfícies clares per a desktop i mòbil."
+        },
+        {
+          "title": "Producció web",
+          "description": "Desenvolupem amb enfocament en rendiment, escalabilitat i manteniment simple."
+        },
+        {
+          "title": "Llançament i millora",
+          "description": "Publiquem, mesurem i optimitzem per sostenir creixement i conversió."
+        }
+      ]
+    },
+    "testimonials": {
+      "kicker": "Resultats",
+      "title": "Equips que ja han construït amb nosaltres",
+      "description": "Clients que valoren una combinació real de disseny, claredat tècnica i velocitat.",
+      "items": [
+        {
+          "quote": "Vam passar d'una web lenta a una plataforma ràpida i escalable. El canvi es va notar des de la primera setmana.",
+          "author": "Marina Gomez",
+          "role": "CMO, Northlane Studio"
+        },
+        {
+          "quote": "L'equip va transformar la nostra idea en un lloc clar i modern. Tot el procés va ser ordenat i sense friccions.",
+          "author": "Diego Ramos",
+          "role": "Founder, Pixel Growth"
+        },
+        {
+          "quote": "Necessitàvem una base tècnica sòlida i una estètica més premium. Van complir terminis i van superar expectatives.",
+          "author": "Sofia Ruiz",
+          "role": "Head of Product, Bright Health Tech"
+        }
+      ]
+    },
+    "faq": {
+      "kicker": "FAQ",
+      "title": "Preguntes habituals abans de començar",
+      "description": "Respostes clares sobre terminis, suport i manera de treballar perquè puguis decidir amb context real.",
+      "items": [
+        {
+          "question": "Quant triga a estar llest un projecte web?",
+          "answer": "Depèn de l'abast, però la majoria de projectes es lliuren entre 3 i 8 setmanes amb fites setmanals clares."
+        },
+        {
+          "question": "Podeu treballar sobre una web existent?",
+          "answer": "Sí. Podem auditar, redissenyar i evolucionar el teu lloc actual sense refer-lo tot des de zero."
+        },
+        {
+          "question": "Incloeu suport després del llançament?",
+          "answer": "Sí. Oferim manteniment evolutiu, millores contínues i suport tècnic per a noves necessitats."
+        },
+        {
+          "question": "Com s'organitza la comunicació del projecte?",
+          "answer": "Centralitzem feedback i avenços en lliuraments setmanals perquè sempre sàpigues què s'ha fet i què ve després."
+        }
+      ]
+    },
+    "newsletter": {
+      "kicker": "Recursos",
+      "title": "Rep idees per millorar la teva web cada mes",
+      "description": "Compartim guies breus de conversió, rendiment i arquitectura web per a equips de màrqueting i producte.",
+      "form": {
+        "submitIdle": "Unir-me",
+        "submitLoading": "Enviant...",
+        "submitDone": "Subscrita",
+        "invalidEmail": "Introdueix un email vàlid.",
+        "success": "Subscripció completada. T'enviarem només contingut útil."
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Servei",
+    "cta": "Parlar d'aquest servei",
+    "cardDetailsAria": "Veure detalls de",
+    "sections": [
+      {
+        "name": "Landing Pages de Conversió",
+        "subtitle": "Pàgines orientades a captar leads i vendes",
+        "description": "Dissenyem landings optimitzades per a campanyes amb focus en velocitat, claredat i resultats de negoci.",
+        "cards": [
+          {
+            "title": "Estratègia",
+            "description": "Proposta de valor i narrativa enfocades a convertir."
+          },
+          {
+            "title": "UI",
+            "description": "Disseny visual net i jeràrquic per a lectura ràpida."
+          },
+          {
+            "title": "Mòduls",
+            "description": "Blocs flexibles per iterar campanyes sense refer-ho tot."
+          },
+          {
+            "title": "CRM",
+            "description": "Formularis connectats al teu flux comercial."
+          },
+          {
+            "title": "Analítica",
+            "description": "Esdeveniments clau i traçabilitat de cada conversió."
+          },
+          {
+            "title": "Llançament",
+            "description": "Publicació ràpida i estable en producció."
+          }
+        ]
+      },
+      {
+        "name": "Web Corporativa",
+        "subtitle": "Llocs institucionals professionals i escalables",
+        "description": "Creem webs de marca sòlides, amb navegació clara i arquitectura preparada per créixer.",
+        "cards": [
+          {
+            "title": "Arquitectura",
+            "description": "Contingut estructurat per comunicar valor en pocs segons."
+          },
+          {
+            "title": "Blog",
+            "description": "Seccions editables per estratègia de continguts i posicionament."
+          },
+          {
+            "title": "Escala",
+            "description": "Base tècnica llesta per evolucionar sense deute innecessari."
+          },
+          {
+            "title": "Idiomes",
+            "description": "Suport multilingüe per a expansió internacional."
+          },
+          {
+            "title": "SEO",
+            "description": "SEO tècnic integrat des de l'estructura del projecte."
+          },
+          {
+            "title": "Components",
+            "description": "Sistema visual consistent per a noves pàgines i seccions."
+          }
+        ]
+      },
+      {
+        "name": "Web App Frontend",
+        "subtitle": "Interfícies dinàmiques per a productes digitals",
+        "description": "Desenvolupem frontends amb Vue per a dashboards, panells i fluxos interactius complexos.",
+        "cards": [
+          {
+            "title": "Vue",
+            "description": "Arquitectura mantenible per a aplicacions de llarga vida."
+          },
+          {
+            "title": "Sistema UI",
+            "description": "Components reutilitzables per escalar més ràpid."
+          },
+          {
+            "title": "Taules",
+            "description": "Visualització de dades clara i optimitzada."
+          },
+          {
+            "title": "Auth UI",
+            "description": "Fluxos d'accés i permisos amb UX consistent."
+          },
+          {
+            "title": "Feedback",
+            "description": "Estats de càrrega, error i confirmació ben definits."
+          },
+          {
+            "title": "APIs",
+            "description": "Integracions robustes amb backend i serveis externs."
+          }
+        ]
+      },
+      {
+        "name": "Optimització i Suport",
+        "subtitle": "Millora contínua després del llançament",
+        "description": "Auditem i evolucionem el teu lloc per sostenir creixement i rendiment a llarg termini.",
+        "cards": [
+          {
+            "title": "Auditoria",
+            "description": "Revisió tècnica de performance, UX i SEO."
+          },
+          {
+            "title": "Refactor",
+            "description": "Millores de codi orientades a estabilitat i velocitat."
+          },
+          {
+            "title": "Noves vistes",
+            "description": "Iteracions funcionals alineades amb el negoci."
+          },
+          {
+            "title": "Monitoratge",
+            "description": "Seguiment d'errors i disponibilitat en producció."
+          },
+          {
+            "title": "Suport",
+            "description": "Bossa d'hores per a canvis prioritaris."
+          },
+          {
+            "title": "Roadmap",
+            "description": "Pla trimestral amb prioritats i objectius mesurables."
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "aside": {
+      "kicker": "Contacte",
+      "title": "Parlem de la teva propera web",
+      "description": "Explica'ns objectius, terminis i context de negoci. Et retornarem una proposta tècnica clara i accionable.",
+      "emailLabel": "Email:",
+      "phoneLabel": "Telèfon:",
+      "scheduleLabel": "Horari:",
+      "scheduleValue": "Dl - Dv | 09:00 a 18:00"
+    },
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "El teu nom",
+      "company": "Empresa",
+      "companyPlaceholder": "Nom de la teva empresa",
+      "email": "Email",
+      "phone": "Telèfon",
+      "service": "Servei d'interès",
+      "serviceOptions": [
+        "Landing Page de Conversió",
+        "Web Corporativa",
+        "Web App Frontend",
+        "Optimització i Suport"
+      ],
+      "message": "Missatge",
+      "messagePlaceholder": "Descriu el teu projecte: tipus de web, objectius i data estimada de llançament",
+      "submit": "Enviar sol·licitud"
+    },
+    "schedule": {
+      "title": "Horari de kickoff",
+      "description": "Selecciona una franja per reservar la primera reunió.",
+      "showButton": "Mostrar horaris disponibles",
+      "hideButton": "Amagar horaris disponibles",
+      "panelTitle": "Selecciona un horari:",
+      "selectedLabel": "Horari seleccionat:",
+      "slots": [
+        "Dilluns 10:00",
+        "Dimarts 15:30",
+        "Dijous 09:00",
+        "Divendres 12:00"
+      ]
+    },
+    "budget": {
+      "locale": "ca-ES",
+      "kicker": "Pressupost orientatiu",
+      "title": "Configura el teu abast inicial",
+      "projectType": "Tipus de projecte",
+      "priority": "Prioritat",
+      "normalTimeline": "Termini normal",
+      "expressTimeline": "Lliurament exprés",
+      "sectionsLabel": "Nombre aproximat de seccions",
+      "extras": "Extres",
+      "estimatedRange": "Rang estimat",
+      "projectTypeOptions": [
+        {
+          "value": "landing",
+          "label": "Landing de conversió"
+        },
+        {
+          "value": "corporativa",
+          "label": "Web corporativa"
+        },
+        {
+          "value": "app",
+          "label": "Frontend de producte"
+        },
+        {
+          "value": "optimizacion",
+          "label": "Optimització i suport"
+        }
+      ],
+      "extraOptions": [
+        {
+          "value": "copy",
+          "label": "Copy estratègic"
+        },
+        {
+          "value": "seo",
+          "label": "Configuració SEO inicial"
+        },
+        {
+          "value": "idiomas",
+          "label": "Versió multidioma"
+        },
+        {
+          "value": "integraciones",
+          "label": "Integracions externes"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "Dissenyem i desenvolupem webs ràpides, elegants i orientades a conversió per a empreses digitals.",
+    "navTitle": "Navegació",
+    "studioTitle": "Estudi",
+    "communityTitle": "Comunitat",
+    "legal": {
+      "privacy": "Política de privacitat",
+      "terms": "Termes i condicions",
+      "notice": "Avís legal"
+    },
+    "copyright": "Copyright {year} Orbit Web Studio. Tots els drets reservats."
+  }
+}

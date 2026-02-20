@@ -1,0 +1,37 @@
+---
+/*
+  Layout base del sitio:
+  - Se aplica a todas las páginas.
+  - Centraliza metadatos mínimos y define idioma del documento.
+*/
+import "../styles/base-theme.css";
+import type { AppLang } from "../i18n/languages";
+
+interface BaseLayoutProps {
+  title?: string;
+  description?: string;
+  lang?: AppLang;
+}
+
+const {
+  title = "Orbit Web Studio | Agencia web",
+  description = "Agencia que diseña y desarrolla páginas web modernas.",
+  lang = "es",
+} = Astro.props as BaseLayoutProps;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen text-slate-900 antialiased">
+    <slot />
+  </body>
+</html>

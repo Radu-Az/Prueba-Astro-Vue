@@ -1,0 +1,15 @@
+---
+import BaseSiteLayout from "../layouts/BaseSiteLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import ServicesBentoSections from "../components/ServicesBentoSections.astro";
+import es from "../i18n/es.json";
+---
+
+<BaseSiteLayout lang="es" title={es.meta.servicesTitle} description={es.meta.servicesDescription}>
+  <SiteHeader lang="es" copy={es.header} />
+
+  <main class="h-[calc(100vh-73px)] snap-y snap-mandatory overflow-y-auto scroll-smooth">
+    <ServicesBentoSections lang="es" copy={es.services} footerCopy={es.footer} />
+  </main>
+</BaseSiteLayout>
+
