@@ -25,28 +25,32 @@ const { copy } = Astro.props as HomeProcessSectionProps;
 
 <section
   id="proceso"
-  class="relative overflow-hidden border-b border-slate-800/80 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-20 sm:py-24"
+  class="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-slate-50 via-white to-cyan-50/35 py-20 sm:py-24 dark:border-slate-800/80 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
 >
-  <div class="pointer-events-none absolute -right-16 top-12 -z-10 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl"></div>
-  <div class="pointer-events-none absolute left-12 bottom-0 -z-10 h-64 w-64 rounded-full bg-sky-500/15 blur-3xl"></div>
+  <div class="pointer-events-none absolute -right-16 top-12 -z-10 h-72 w-72 rounded-full bg-cyan-100/60 blur-3xl dark:bg-cyan-500/20"></div>
+  <div class="pointer-events-none absolute left-12 bottom-0 -z-10 h-64 w-64 rounded-full bg-sky-100/55 blur-3xl dark:bg-sky-500/15"></div>
 
   <div class="mx-auto max-w-6xl px-6 lg:px-8">
     <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-      <header>
-        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-300">{copy.kicker}</p>
-        <h2 class="mt-3 text-3xl text-white sm:text-4xl">{copy.title}</h2>
-        <p class="mt-4 max-w-md text-slate-300">{copy.description}</p>
+      <header data-reveal="left">
+        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-cyan-700 dark:text-cyan-300">{copy.kicker}</p>
+        <h2 class="mt-3 text-3xl text-slate-900 sm:text-4xl dark:text-white">{copy.title}</h2>
+        <p class="mt-4 max-w-md text-slate-600 dark:text-slate-300">{copy.description}</p>
       </header>
 
       <div class="grid gap-5 sm:grid-cols-2">
         {
           copy.steps.map((processStep, stepIndex) => (
-            <article class="rounded-2xl border border-slate-700/80 bg-slate-900/70 p-6 shadow-lg shadow-slate-950/40 backdrop-blur">
+            <article
+              class="rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm shadow-slate-200/70 backdrop-blur dark:border-slate-700/80 dark:bg-slate-900/70 dark:shadow-slate-950/40"
+              data-reveal="up"
+              style={`transition-delay: ${90 + stepIndex * 70}ms;`}
+            >
               <p class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-cyan-500 text-xs font-semibold text-white">
                 {stepIndex + 1}
               </p>
-              <h3 class="mt-4 text-lg font-semibold text-slate-100">{processStep.title}</h3>
-              <p class="mt-2 text-sm leading-relaxed text-slate-300">{processStep.description}</p>
+              <h3 class="mt-4 text-lg font-semibold text-slate-900 dark:text-slate-100">{processStep.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{processStep.description}</p>
             </article>
           ))
         }
@@ -54,4 +58,3 @@ const { copy } = Astro.props as HomeProcessSectionProps;
     </div>
   </div>
 </section>
-

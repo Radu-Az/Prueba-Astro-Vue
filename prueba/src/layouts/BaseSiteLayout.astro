@@ -5,6 +5,7 @@
   - Centraliza metadatos mínimos y define idioma del documento.
 */
 import "../styles/base-theme.css";
+import ScrollRevealIsland from "../components/ScrollRevealIsland.vue";
 import type { AppLang } from "../i18n/languages";
 
 interface BaseLayoutProps {
@@ -23,6 +24,45 @@ const {
 <!doctype html>
 <html lang={lang}>
   <head>
+    <style is:inline>
+      html {
+        background: #f8fafc;
+        color-scheme: light;
+      }
+
+      html.dark {
+        background: #020617;
+        color-scheme: dark;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: #020617;
+          color-scheme: dark;
+        }
+      }
+
+      body {
+        background: transparent;
+      }
+    </style>
+    <script is:inline>
+      (() => {
+        document.documentElement.classList.add("js");
+        try {
+          const savedTheme = window.localStorage.getItem("orbit_theme_mode");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const shouldUseDark = savedTheme ? savedTheme === "dark" : prefersDark;
+          document.documentElement.classList.toggle("dark", shouldUseDark);
+          document.documentElement.style.backgroundColor = shouldUseDark ? "#020617" : "#f8fafc";
+          document.documentElement.style.colorScheme = shouldUseDark ? "dark" : "light";
+        } catch {
+          document.documentElement.classList.remove("dark");
+          document.documentElement.style.backgroundColor = "#f8fafc";
+          document.documentElement.style.colorScheme = "light";
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
@@ -31,7 +71,8 @@ const {
     <link rel="icon" href="/favicon.ico" />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen text-slate-900 antialiased">
+  <body class="min-h-screen bg-[var(--page-bg)] text-[var(--page-ink)] antialiased">
+    <ScrollRevealIsland client:load />
     <slot />
   </body>
 </html>

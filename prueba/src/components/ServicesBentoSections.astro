@@ -41,18 +41,25 @@ interface FooterCopy {
   copyright: string;
 }
 
+interface FooterNavCopy {
+  home: string;
+  services: string;
+  contact: string;
+}
+
 interface ServicesBentoSectionsProps {
   lang: AppLang;
   copy: ServicesCopy;
   footerCopy: FooterCopy;
+  footerNavCopy: FooterNavCopy;
 }
 
-const { lang = "es", copy, footerCopy } = Astro.props as ServicesBentoSectionsProps;
+const { lang = "es", copy, footerCopy, footerNavCopy } = Astro.props as ServicesBentoSectionsProps;
 
 const sectionLayouts = [
   {
     id: "landing",
-    tone: "bg-gradient-to-br from-white via-cyan-50/65 to-white",
+    tone: "bg-gradient-to-br from-white via-cyan-50/65 to-white dark:from-slate-950 dark:via-cyan-950/25 dark:to-slate-950",
     cardSizes: [
       "md:col-span-4 min-h-32",
       "md:col-span-2 min-h-32",
@@ -64,7 +71,7 @@ const sectionLayouts = [
   },
   {
     id: "corporativa",
-    tone: "bg-gradient-to-br from-white via-amber-50/65 to-white",
+    tone: "bg-gradient-to-br from-white via-amber-50/65 to-white dark:from-slate-950 dark:via-amber-950/20 dark:to-slate-950",
     cardSizes: [
       "md:col-span-4 min-h-28",
       "md:col-span-2 min-h-28",
@@ -76,7 +83,7 @@ const sectionLayouts = [
   },
   {
     id: "producto",
-    tone: "bg-gradient-to-br from-white via-emerald-50/65 to-white",
+    tone: "bg-gradient-to-br from-white via-emerald-50/65 to-white dark:from-slate-950 dark:via-emerald-950/20 dark:to-slate-950",
     cardSizes: [
       "md:col-span-2 min-h-32",
       "md:col-span-4 min-h-32",
@@ -88,7 +95,7 @@ const sectionLayouts = [
   },
   {
     id: "optimizacion",
-    tone: "bg-gradient-to-br from-white via-rose-50/65 to-white",
+    tone: "bg-gradient-to-br from-white via-rose-50/65 to-white dark:from-slate-950 dark:via-rose-950/20 dark:to-slate-950",
     cardSizes: [
       "md:col-span-3 min-h-28",
       "md:col-span-3 min-h-28",
@@ -115,32 +122,37 @@ const serviceSections = sectionLayouts.map((layout, sectionIndex) => {
 
 {
   serviceSections.map((serviceSection, sectionIndex) => (
-    <section id={serviceSection.id} class:list={["snap-start min-h-[calc(100vh-73px)] border-b border-slate-200/70", serviceSection.tone]}>
+    <section
+      id={serviceSection.id}
+      class:list={["snap-start min-h-[calc(100vh-73px)] border-b border-slate-200/70 dark:border-slate-800/80", serviceSection.tone]}
+    >
       <div class="mx-auto flex min-h-[calc(100vh-73px)] max-w-6xl flex-col justify-center px-6 py-10 lg:px-8">
         <div class="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-12">
-          <header class="flex flex-col">
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+          <header class="flex flex-col" data-reveal="left">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
               {copy.sectionLabel} {String(sectionIndex + 1).padStart(2, "0")}
             </p>
-            <h2 class="mt-3 text-3xl text-slate-900 sm:text-4xl">{serviceSection.name}</h2>
-            <p class="mt-4 text-lg text-slate-700">{serviceSection.subtitle}</p>
-            <p class="mt-3 text-slate-600">{serviceSection.description}</p>
+            <h2 class="mt-3 text-3xl text-slate-900 sm:text-4xl dark:text-slate-100">{serviceSection.name}</h2>
+            <p class="mt-4 text-lg text-slate-700 dark:text-slate-300">{serviceSection.subtitle}</p>
+            <p class="mt-3 text-slate-600 dark:text-slate-400">{serviceSection.description}</p>
 
             <a
               href={toLocalizedPath("/contacto", lang)}
-              class="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900"
+              class="mt-6 inline-flex w-fit items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-500 dark:hover:text-slate-100"
             >
               {copy.cta}
             </a>
           </header>
 
-          <ServiceCardsBentoIsland client:visible cards={serviceSection.cards} details-label={copy.cardDetailsAria} />
+          <div data-reveal="right" style={`transition-delay: ${100 + sectionIndex * 20}ms;`}>
+            <ServiceCardsBentoIsland client:visible cards={serviceSection.cards} details-label={copy.cardDetailsAria} />
+          </div>
         </div>
       </div>
 
       {sectionIndex === serviceSections.length - 1 && (
         <div class="snap-start">
-          <SiteFooter lang={lang} copy={footerCopy} />
+          <SiteFooter lang={lang} copy={footerCopy} navCopy={footerNavCopy} />
         </div>
       )}
     </section>

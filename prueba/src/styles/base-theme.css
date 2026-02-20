@@ -1,52 +1,52 @@
 /*
-  Este archivo define el estilo base global del sitio.
-  1) Cargamos fuentes y Tailwind.
-  2) Declaramos variables de color reutilizables.
-  3) Configuramos estilos generales de documento y tipografía.
+  Base global:
+  - Tailwind + plugin de tipografia.
+  - Variables de tema claro/oscuro.
+  - Utilidades de animacion de entrada por scroll.
 */
 
-/* Fuente principal (texto) + fuente de titulares. */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
-
-/* Cargamos utilidades de Tailwind en todo el proyecto. */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
 
-/*
-  Variables CSS:
-  - Facilitan cambios de marca sin tocar muchos archivos.
-  - Se usan como valores base para fondo, texto y acentos.
-*/
 :root {
+  color-scheme: light;
   --page-bg: #f8fafc;
   --page-ink: #0f172a;
   --brand-500: #0891b2;
+  --surface-soft: rgba(255, 255, 255, 0.8);
+  --spot-a: rgba(186, 230, 253, 0.35);
+  --spot-b: rgba(165, 243, 252, 0.3);
 }
 
-/* Suaviza el comportamiento de scroll cuando se usan anclas internas. */
+.dark {
+  color-scheme: dark;
+  --page-bg: #020617;
+  --page-ink: #e2e8f0;
+  --brand-500: #22d3ee;
+  --surface-soft: rgba(15, 23, 42, 0.55);
+  --spot-a: rgba(15, 118, 110, 0.24);
+  --spot-b: rgba(30, 64, 175, 0.26);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/*
-  Estilo base de toda la página:
-  - Fondo con degradados radiales muy suaves para dar profundidad.
-  - Tipografía principal de lectura.
-*/
 body {
   margin: 0;
   font-family: "Manrope", "Nunito Sans", sans-serif;
   color: var(--page-ink);
   background:
-    radial-gradient(circle at 0% 0%, rgba(186, 230, 253, 0.35), transparent 36%),
-    radial-gradient(circle at 100% 18%, rgba(165, 243, 252, 0.3), transparent 34%),
+    radial-gradient(circle at 0% 0%, var(--spot-a), transparent 36%),
+    radial-gradient(circle at 100% 18%, var(--spot-b), transparent 34%),
     var(--page-bg);
+  transition:
+    background-color 420ms ease,
+    color 320ms ease;
 }
 
-/*
-  Titulares:
-  - Cambiamos la familia tipográfica para más personalidad visual.
-  - Ajustamos tracking para un look más compacto y moderno.
-*/
 h1,
 h2,
 h3,
@@ -57,7 +57,6 @@ h6 {
   letter-spacing: -0.02em;
 }
 
-/* Heredamos tipografía en controles para coherencia visual del UI. */
 a,
 button,
 input,
@@ -66,8 +65,42 @@ select {
   font: inherit;
 }
 
-/* Color de selección de texto alineado con la marca. */
 ::selection {
   color: #ecfeff;
   background: color-mix(in srgb, var(--brand-500) 75%, #000000 8%);
+}
+
+/* Scroll reveal (se activa cuando html tiene clase .js) */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0) scale(0.98);
+  transition:
+    opacity 680ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 680ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.js [data-reveal="left"] {
+  transform: translate3d(-30px, 0, 0) scale(0.98);
+}
+
+.js [data-reveal="right"] {
+  transform: translate3d(30px, 0, 0) scale(0.98);
+}
+
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

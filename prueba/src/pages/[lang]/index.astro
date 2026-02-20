@@ -1,0 +1,16 @@
+---
+import type { GetStaticPaths } from "astro";
+import HomePageTemplate from "../../components/pages/HomePageTemplate.astro";
+import { getDictionary } from "../../i18n/dictionaries";
+import { getLocalizedStaticPaths, type AppLang } from "../../i18n/languages";
+
+export const getStaticPaths: GetStaticPaths = () =>
+  getLocalizedStaticPaths().map((localizedPath) => ({
+    ...localizedPath,
+    props: { lang: localizedPath.params.lang },
+  }));
+
+const { lang } = Astro.props as { lang: AppLang };
+---
+
+<HomePageTemplate lang={lang} dictionary={getDictionary(lang)} />

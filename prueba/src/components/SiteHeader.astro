@@ -1,11 +1,13 @@
 ---
 /*
   Header principal:
-  - Reutilizable en todas las páginas.
-  - Marca ruta activa y permite cambiar idioma con enlaces.
+  - Reutilizable en todas las paginas.
+  - Marca ruta activa.
+  - Permite cambiar idioma y tema.
 */
+import ThemeToggleIsland from "./ThemeToggleIsland.vue";
 import type { AppLang } from "../i18n/languages";
-import { getLanguageSwitchLinks, stripLanguagePrefix, toLocalizedPath } from "../i18n/languages";
+import { getLanguageSwitchLinks, normalizePathname, stripLanguagePrefix, toLocalizedPath } from "../i18n/languages";
 
 interface HeaderCopy {
   tagline: string;
@@ -32,7 +34,6 @@ interface SiteHeaderProps {
 
 const { lang = "es", copy } = Astro.props as SiteHeaderProps;
 
-const normalizePathname = (path: string) => (path !== "/" && path.endsWith("/") ? path.slice(0, -1) : path);
 const currentPathname = normalizePathname(Astro.url.pathname);
 const basePathname = stripLanguagePrefix(currentPathname);
 
@@ -59,13 +60,13 @@ const languageSwitchLinks = getLanguageSwitchLinks(currentPathname).map((languag
 const currentLanguageLabel = languageLabelByCode[lang];
 ---
 
-<header class="sticky top-0 z-50 border-b border-slate-800/70 bg-slate-950/85 backdrop-blur-xl">
+<header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl transition-colors dark:border-slate-800/70 dark:bg-slate-950/85">
   <div class="mx-auto flex max-w-6xl items-center gap-4 px-6 py-4 lg:px-8">
-    <a href={toLocalizedPath("/", lang)} class="inline-flex items-center gap-3 text-white">
-      <span class="h-2.5 w-2.5 rounded-full bg-cyan-300 shadow-[0_0_0_7px_rgba(34,211,238,0.18)]"></span>
+    <a href={toLocalizedPath("/", lang)} class="inline-flex items-center gap-3 text-slate-900 dark:text-white">
+      <span class="h-2.5 w-2.5 rounded-full bg-cyan-500 shadow-[0_0_0_7px_rgba(6,182,212,0.16)] dark:bg-cyan-300 dark:shadow-[0_0_0_7px_rgba(34,211,238,0.2)]"></span>
       <span>
         <span class="block text-base font-semibold leading-none">Orbit Web Studio</span>
-        <span class="mt-1 hidden text-[11px] font-medium uppercase tracking-[0.2em] text-slate-400 sm:block">
+        <span class="mt-1 hidden text-[11px] font-medium uppercase tracking-[0.2em] text-slate-500 sm:block dark:text-slate-400">
           {copy.tagline}
         </span>
       </span>
@@ -80,10 +81,10 @@ const currentLanguageLabel = languageLabelByCode[lang];
             <a
               href={navigationLink.href}
               class:list={[
-                "relative py-1 text-sm font-medium transition after:absolute after:bottom-[-7px] after:left-0 after:h-0.5 after:w-full after:origin-left after:rounded-full after:bg-cyan-300 after:transition-transform after:duration-300",
+                "relative py-1 text-sm font-medium transition after:absolute after:bottom-[-7px] after:left-0 after:h-0.5 after:w-full after:origin-left after:rounded-full after:bg-cyan-500 after:transition-transform after:duration-300 dark:after:bg-cyan-300",
                 isCurrentPage
-                  ? "text-white after:scale-x-100"
-                  : "text-slate-300 after:scale-x-0 hover:text-white hover:after:scale-x-100",
+                  ? "text-slate-900 after:scale-x-100 dark:text-white"
+                  : "text-slate-600 after:scale-x-0 hover:text-slate-900 hover:after:scale-x-100 dark:text-slate-300 dark:hover:text-white",
               ]}
               aria-current={isCurrentPage ? "page" : undefined}
             >
@@ -94,8 +95,10 @@ const currentLanguageLabel = languageLabelByCode[lang];
       }
     </nav>
 
-    <details class="group relative ml-4 hidden md:block">
-      <summary class="inline-flex list-none cursor-pointer items-center gap-2 rounded-full border border-slate-700 bg-slate-900/90 px-3 py-2 text-slate-200 marker:content-none">
+    <ThemeToggleIsland client:load class="hidden md:inline-flex" />
+
+    <details class="group relative ml-3 hidden md:block">
+      <summary class="inline-flex list-none cursor-pointer items-center gap-2 rounded-full border border-slate-300 bg-white/90 px-3 py-2 text-slate-700 marker:content-none dark:border-slate-700 dark:bg-slate-900/90 dark:text-slate-200">
         <span class="text-[11px] font-semibold tracking-[0.12em]">{currentLanguageLabel}</span>
         <svg
           class="h-3.5 w-3.5 text-slate-400 transition duration-200 group-open:rotate-180"
@@ -108,7 +111,7 @@ const currentLanguageLabel = languageLabelByCode[lang];
         </svg>
       </summary>
 
-      <div class="absolute right-0 mt-3 w-40 rounded-2xl border border-slate-700/80 bg-slate-900/95 p-2 shadow-xl shadow-slate-950/70">
+      <div class="absolute right-0 mt-3 w-40 rounded-2xl border border-slate-300/80 bg-white/95 p-2 shadow-xl shadow-slate-900/10 dark:border-slate-700/80 dark:bg-slate-900/95 dark:shadow-slate-950/70">
         {
           languageSwitchLinks.map((languageLink) => (
             <a
@@ -116,8 +119,8 @@ const currentLanguageLabel = languageLabelByCode[lang];
               class:list={[
                 "block rounded-lg px-3 py-2 text-xs font-semibold tracking-wide transition",
                 lang === languageLink.code
-                  ? "bg-cyan-500/20 text-cyan-200"
-                  : "text-slate-300 hover:bg-slate-800 hover:text-white",
+                  ? "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-200"
+                  : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white",
               ]}
               aria-current={lang === languageLink.code ? "true" : undefined}
             >
@@ -129,7 +132,7 @@ const currentLanguageLabel = languageLabelByCode[lang];
     </details>
 
     <details class="relative ml-auto md:hidden">
-      <summary class="list-none rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 text-slate-200 marker:content-none">
+      <summary class="list-none rounded-lg border border-slate-300 bg-white/90 px-3 py-2 text-slate-700 marker:content-none dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200">
         <span class="sr-only">{copy.openMenu}</span>
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -137,7 +140,7 @@ const currentLanguageLabel = languageLabelByCode[lang];
       </summary>
 
       <nav
-        class="absolute right-0 mt-3 w-56 rounded-2xl border border-slate-700/80 bg-slate-900/95 p-2 shadow-xl shadow-slate-950/70"
+        class="absolute right-0 mt-3 w-56 rounded-2xl border border-slate-300/80 bg-white/95 p-2 shadow-xl shadow-slate-900/10 dark:border-slate-700/80 dark:bg-slate-900/95 dark:shadow-slate-950/70"
         aria-label={copy.openMenu}
       >
         {
@@ -150,8 +153,8 @@ const currentLanguageLabel = languageLabelByCode[lang];
                 class:list={[
                   "block rounded-xl px-4 py-3 text-sm transition",
                   isCurrentPage
-                    ? "bg-cyan-500/15 font-semibold text-cyan-200"
-                    : "text-slate-300 hover:bg-slate-800 hover:text-white",
+                    ? "bg-cyan-100 font-semibold text-cyan-700 dark:bg-cyan-500/15 dark:text-cyan-200"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-white",
                 ]}
                 aria-current={isCurrentPage ? "page" : undefined}
               >
@@ -161,8 +164,8 @@ const currentLanguageLabel = languageLabelByCode[lang];
           })
         }
 
-        <details class="group mt-2 rounded-xl border border-slate-700/70 bg-slate-900/80">
-          <summary class="flex list-none items-center justify-between px-4 py-3 text-sm text-slate-200 marker:content-none">
+        <details class="group mt-2 rounded-xl border border-slate-300/70 bg-white/75 dark:border-slate-700/70 dark:bg-slate-900/80">
+          <summary class="flex list-none items-center justify-between px-4 py-3 text-sm text-slate-700 marker:content-none dark:text-slate-200">
             <span class="text-xs font-semibold tracking-[0.12em]">{currentLanguageLabel}</span>
             <svg
               class="h-3.5 w-3.5 text-slate-400 transition duration-200 group-open:rotate-180"
@@ -183,8 +186,8 @@ const currentLanguageLabel = languageLabelByCode[lang];
                   class:list={[
                     "rounded-lg px-2 py-2 text-center text-xs font-semibold transition",
                     lang === languageLink.code
-                      ? "bg-cyan-500/20 text-cyan-200"
-                      : "bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white",
+                      ? "bg-cyan-100 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-200"
+                      : "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white",
                   ]}
                   aria-current={lang === languageLink.code ? "true" : undefined}
                 >
@@ -194,6 +197,10 @@ const currentLanguageLabel = languageLabelByCode[lang];
             }
           </div>
         </details>
+
+        <div class="mt-3 border-t border-slate-200 pt-3 dark:border-slate-700">
+          <ThemeToggleIsland client:load compact />
+        </div>
       </nav>
     </details>
   </div>

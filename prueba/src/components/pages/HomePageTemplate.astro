@@ -1,0 +1,33 @@
+---
+import HomeFaqSection from "../HomeFaqSection.astro";
+import HomeHeroSection from "../HomeHeroSection.astro";
+import HomeNewsletterSection from "../HomeNewsletterSection.astro";
+import HomeProcessSection from "../HomeProcessSection.astro";
+import HomeTestimonialsSection from "../HomeTestimonialsSection.astro";
+import SiteFooter from "../SiteFooter.astro";
+import SiteHeader from "../SiteHeader.astro";
+import BaseSiteLayout from "../../layouts/BaseSiteLayout.astro";
+import type { SiteDictionary } from "../../i18n/dictionaries";
+import type { AppLang } from "../../i18n/languages";
+
+interface HomePageTemplateProps {
+  lang: AppLang;
+  dictionary: SiteDictionary;
+}
+
+const { lang, dictionary } = Astro.props as HomePageTemplateProps;
+---
+
+<BaseSiteLayout lang={lang} title={dictionary.meta.homeTitle} description={dictionary.meta.homeDescription}>
+  <SiteHeader lang={lang} copy={dictionary.header} />
+
+  <main>
+    <HomeHeroSection lang={lang} copy={dictionary.home.hero} />
+    <HomeProcessSection copy={dictionary.home.process} />
+    <HomeTestimonialsSection copy={dictionary.home.testimonials} />
+    <HomeFaqSection copy={dictionary.home.faq} />
+    <HomeNewsletterSection copy={dictionary.home.newsletter} />
+  </main>
+
+  <SiteFooter lang={lang} copy={dictionary.footer} navCopy={dictionary.header.nav} />
+</BaseSiteLayout>

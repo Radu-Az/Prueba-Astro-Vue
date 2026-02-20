@@ -14,13 +14,13 @@
           name="newsletter_email"
           autocomplete="email"
           placeholder="tu@email.com"
-          class="w-full rounded-full border border-slate-300 bg-white/95 px-5 py-3 text-sm text-slate-800 outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100"
+          class="w-full rounded-full border border-slate-300 bg-white/95 px-5 py-3 text-sm text-slate-800 outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100 dark:placeholder:text-slate-400 dark:focus:border-cyan-400 dark:focus:ring-cyan-500/20"
         />
       </label>
 
       <button
         type="submit"
-        class="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-65"
+        class="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-65 dark:bg-cyan-400 dark:text-slate-950 dark:hover:bg-cyan-300"
         :disabled="isSubmitting || isSubscribed"
       >
         {{ submitLabel }}

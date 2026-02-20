@@ -1,8 +1,8 @@
 ---
 /*
   Footer global:
-  - Mantiene navegación, legal y comunidad.
-  - Ajusta rutas según idioma.
+  - Mantiene navegacion, legal y comunidad.
+  - Usa las etiquetas de nav del mismo diccionario que el header.
 */
 import type { AppLang } from "../i18n/languages";
 import { toLocalizedPath } from "../i18n/languages";
@@ -20,27 +20,25 @@ interface FooterCopy {
   copyright: string;
 }
 
+interface FooterNavCopy {
+  home: string;
+  services: string;
+  contact: string;
+}
+
 interface SiteFooterProps {
   lang: AppLang;
   copy: FooterCopy;
+  navCopy: FooterNavCopy;
 }
 
-const { lang = "es", copy } = Astro.props as SiteFooterProps;
-
-const navigationLabelsByLang = {
-  es: ["Inicio", "Servicios", "Contacto"],
-  en: ["Home", "Services", "Contact"],
-  pt: ["Início", "Serviços", "Contato"],
-  ca: ["Inici", "Serveis", "Contacte"],
-  fr: ["Accueil", "Services", "Contact"],
-  eu: ["Hasiera", "Zerbitzuak", "Kontaktua"],
-};
+const { lang = "es", copy, navCopy } = Astro.props as SiteFooterProps;
 
 const footerLinkGroups = {
   navigation: [
-    { label: navigationLabelsByLang[lang][0], href: toLocalizedPath("/", lang) },
-    { label: navigationLabelsByLang[lang][1], href: toLocalizedPath("/servicios", lang) },
-    { label: navigationLabelsByLang[lang][2], href: toLocalizedPath("/contacto", lang) },
+    { label: navCopy.home, href: toLocalizedPath("/", lang) },
+    { label: navCopy.services, href: toLocalizedPath("/servicios", lang) },
+    { label: navCopy.contact, href: toLocalizedPath("/contacto", lang) },
   ],
   legal: [
     { label: copy.legal.privacy, href: "#" },
@@ -57,21 +55,21 @@ const footerLinkGroups = {
 const year = String(new Date().getFullYear());
 ---
 
-<footer class="border-t border-slate-800 bg-slate-950 text-slate-300">
+<footer class="border-t border-slate-200 bg-white/85 text-slate-600 transition-colors dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
   <div class="mx-auto max-w-6xl px-6 py-14 lg:px-8">
     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
       <div class="md:col-span-2 lg:col-span-1">
-        <p class="text-xl font-semibold text-white">Orbit Web Studio</p>
-        <p class="mt-3 max-w-xs text-sm leading-relaxed text-slate-400">{copy.description}</p>
+        <p class="text-xl font-semibold text-slate-900 dark:text-white">Orbit Web Studio</p>
+        <p class="mt-3 max-w-xs text-sm leading-relaxed text-slate-500 dark:text-slate-400">{copy.description}</p>
       </div>
 
       <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{copy.navTitle}</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">{copy.navTitle}</p>
         <ul class="mt-4 space-y-2.5">
           {
             footerLinkGroups.navigation.map((linkItem) => (
               <li>
-                <a href={linkItem.href} class="text-sm transition hover:text-white">
+                <a href={linkItem.href} class="text-sm transition hover:text-slate-900 dark:hover:text-white">
                   {linkItem.label}
                 </a>
               </li>
@@ -81,12 +79,12 @@ const year = String(new Date().getFullYear());
       </div>
 
       <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{copy.studioTitle}</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">{copy.studioTitle}</p>
         <ul class="mt-4 space-y-2.5">
           {
             footerLinkGroups.legal.map((linkItem) => (
               <li>
-                <a href={linkItem.href} class="text-sm transition hover:text-white">
+                <a href={linkItem.href} class="text-sm transition hover:text-slate-900 dark:hover:text-white">
                   {linkItem.label}
                 </a>
               </li>
@@ -96,12 +94,12 @@ const year = String(new Date().getFullYear());
       </div>
 
       <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{copy.communityTitle}</p>
+        <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500 dark:text-slate-400">{copy.communityTitle}</p>
         <ul class="mt-4 space-y-2.5">
           {
             footerLinkGroups.community.map((linkItem) => (
               <li>
-                <a href={linkItem.href} class="text-sm transition hover:text-white">
+                <a href={linkItem.href} class="text-sm transition hover:text-slate-900 dark:hover:text-white">
                   {linkItem.label}
                 </a>
               </li>
@@ -111,9 +109,8 @@ const year = String(new Date().getFullYear());
       </div>
     </div>
 
-    <div class="mt-10 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
+    <div class="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-500 dark:border-slate-800">
       {copy.copyright.replace("{year}", year)}
     </div>
   </div>
 </footer>
-

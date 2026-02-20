@@ -1,0 +1,27 @@
+---
+import ServicesBentoSections from "../ServicesBentoSections.astro";
+import SiteHeader from "../SiteHeader.astro";
+import BaseSiteLayout from "../../layouts/BaseSiteLayout.astro";
+import type { SiteDictionary } from "../../i18n/dictionaries";
+import type { AppLang } from "../../i18n/languages";
+
+interface ServicesPageTemplateProps {
+  lang: AppLang;
+  dictionary: SiteDictionary;
+}
+
+const { lang, dictionary } = Astro.props as ServicesPageTemplateProps;
+---
+
+<BaseSiteLayout lang={lang} title={dictionary.meta.servicesTitle} description={dictionary.meta.servicesDescription}>
+  <SiteHeader lang={lang} copy={dictionary.header} />
+
+  <main class="h-[calc(100vh-73px)] snap-y snap-mandatory overflow-y-auto scroll-smooth">
+    <ServicesBentoSections
+      lang={lang}
+      copy={dictionary.services}
+      footerCopy={dictionary.footer}
+      footerNavCopy={dictionary.header.nav}
+    />
+  </main>
+</BaseSiteLayout>
